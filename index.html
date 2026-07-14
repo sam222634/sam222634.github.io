@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samuel Zamora · CV | Backend, DevOps & IoT</title>
+  <meta name="description" content="CV de Ingeniero en Sistemas Computacionales enfocado en Backend, DevOps, Linux e IoT.">
+
+  <!-- ==========================================================
+       FUENTES: Google Fonts
+       - 'JetBrains Mono' => tipografía de acento/terminal (títulos, prompts, etiquetas)
+       - 'Inter'          => tipografía de lectura para párrafos
+       ========================================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ==========================================================
+       FONTAWESOME (CDN) - Iconos para redes, skills y contacto
+       ========================================================== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Hoja de estilos externa -->
+  <link rel="stylesheet" href="resources/css/styles.css">
+</head>
+<body>
+
+ 
+  <header class="hero">
+    <div class="terminal-window">
+
+      <!-- Barra superior estilo macOS/Linux terminal -->
+      <div class="terminal-bar">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+        <span class="terminal-title">visitante@cv-devops: ~</span>
+      </div>
+
+      <div class="terminal-body">
+        <p class="term-line">
+          <span class="term-user">visitante@cv-devops</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span>
+          whoami
+        </p>
+
+        <h1 class="output-name">Samuel Zamora Martinez</h1>
+
+        <p class="term-line">
+          <span class="term-user">visitante@cv-devops</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span>
+          cat perfil.txt
+        </p>
+
+        <p class="output-role">
+          Estudiante de Ing. en Sistemas Computacionales <span class="pipe">|</span>
+          Backend, DevOps &amp; IoT
+        </p>
+
+        <p class="term-line">
+          <span class="term-user">visitante@cv-devops</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span>
+          ./contacto.sh<span class="cursor" aria-hidden="true">▌</span>
+        </p>
+
+        <nav class="contact-nav" aria-label="Enlaces de contacto y redes">
+          <ul>
+            <li>
+              <a href="mailto:sam.zamoramty+cv+@gmail.com">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i> sam.zamoramty@gmail.com
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/sam222634" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github" aria-hidden="true"></i> github.com/sam222634
+              </a>
+            </li>
+            <li>
+              <a href="tel:+524612189375">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i> +524612189375
+              </a>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Celaya, Guanajuato, México</span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section" aria-labelledby="about-title">
+      <h2 id="about-title" class="section-title"><span class="path-tag">~/about</span> Sobre mí</h2>
+      <div class="section-content">
+        <p class="lead-text">
+          Estudiante de Ingeniería en Sistemas Computacionales apasionado por construir
+          <strong>infraestructura confiable</strong> y <strong>sistemas embebidos conectados</strong>.
+          Disfruto automatizar procesos con <strong>Bash</strong> y <strong>Docker</strong>, diseñar APIs
+          robustas en <strong>Python</strong> y <strong>Node.js</strong>, y llevar datos del mundo físico al
+          software mediante microcontroladores <strong>ESP32</strong> y el protocolo <strong>MQTT</strong>.
+          Me interesa seguir creciendo en las areas Backend, DevOps e IoT para resolver problemas reales.
+        </p>
+      </div>
+    </section>
+    
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <h2 id="skills-title" class="section-title"><span class="path-tag">~/skills</span> Habilidades técnicas</h2>
+
+      <div class="cards-grid skills-grid">
+
+        <!-- Card 1: Backend -->
+        <article class="card">
+          <div class="card-header">
+            <i class="fa-solid fa-server card-icon" aria-hidden="true"></i>
+            <h3>Backend</h3>
+          </div>
+          <ul class="tag-list">
+            <li><i class="fa-brands fa-php"></i> PHP</li>
+            <li><i class="fa-brands fa-python"></i> Python</li>
+            <li><i class="fa-brands fa-node-js"></i> Node.js</li>
+            <li><i class="fa-solid fa-database"></i> MySQL / PostgreSQL</li>
+            <li><i class="fa-solid fa-plug"></i> REST APIs</li>
+            <li><i class="fa-brands fa-laravel"></i> Laravel</li>
+          </ul>
+        </article>
+
+        <!-- Card 2: DevOps & Linux -->
+        <article class="card">
+          <div class="card-header">
+            <i class="fa-brands fa-linux card-icon" aria-hidden="true"></i>
+            <h3>DevOps &amp; Linux</h3>
+          </div>
+          <ul class="tag-list">
+            <li><i class="fa-brands fa-docker"></i> Docker &amp; Compose</li>
+            <li><i class="fa-solid fa-terminal"></i> Bash Scripting</li>
+            <li><i class="fa-brands fa-git-alt"></i> Git &amp; GitHub Actions</li>
+            <li><i class="fa-solid fa-network-wired"></i> Administración de Redes</li>
+            <li><i class="fa-solid fa-shield-halved"></i> SysAdmin (Ubuntu/Debian)</li>
+            <li><i class="fa-solid fa-cloud"></i> Nginx / VPS</li>
+          </ul>
+        </article>
+
+        <!-- Card 3: IoT y Electrónica -->
+        <article class="card">
+          <div class="card-header">
+            <i class="fa-solid fa-microchip card-icon" aria-hidden="true"></i>
+            <h3>IoT &amp; Electrónica</h3>
+          </div>
+          <ul class="tag-list">
+            <li><i class="fa-solid fa-wifi"></i> ESP32 / ESP8266</li>
+            <li><i class="fa-solid fa-tower-broadcast"></i> Protocolo MQTT</li>
+            <li><i class="fa-brands fa-usb"></i> Arduino / Microcontroladores</li>
+            <li><i class="fa-solid fa-bolt"></i> Electrónica Analógica/Digital</li>
+            <li><i class="fa-solid fa-satellite-dish"></i> Sensores &amp; Actuadores</li>
+            <!--
+            <li><i class="fa-solid fa-code"></i> C / C++ embebido</li>
+            -->
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="section-title"><span class="path-tag">~/projects</span> Proyectos/Emprendimiento</h2>
+
+      <div class="cards-grid projects-grid">
+
+        <article class="card project-card">
+          <!-- Emprendimiento/proyecto 1 -->
+          <h3>Sistema de Gestión, Cotización e Inventario para Manufactura 3D/2D</h3>
+          <p class="project-desc">
+            Plataforma web diseñada para automatizar el ciclo de venta de un negocio de impresión 
+            3D y corte 2D. Implementa un cotizador automático en tiempo real que analiza archivos     
+            <strong>.STL</strong> mediante <strong>Three.js (WebGL)</strong> y la API de
+            <strong>Kiri:Moto</strong> desde el navegador; el backend desarrollado en <strong>PHP     
+            (MVC)</strong> asegura la consistencia de inventario mediante transacciones en            
+            <strong>PostgreSQL</strong> e integra pagos seguros con la API de <strong>PayPal</strong>.
+          </p>
+          <div class="stack-tags">
+            <span>PHP (MVC)</span><span>PostgreSQL</span><span>Three.
+            js</span><span>WebGL</span><span>PayPal API</span><span>Kiri:Moto</span>
+          </div>
+          <!--
+          <a class="repo-link" href="https://github.com/sam222634/Gestion-invernadero-manufactura" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i> Ver repositorio
+          </a>
+            -->
+        </article>
+
+        <!-- Proyecto 1 -->
+        <article class="card project-card">                                                     
+          <h3>Homelab Health Dashboard</h3>                                                     
+          <p class="project-desc">                                                              
+            Sistema de observabilidad en tiempo real para monitorear salud ambiental y consumo  
+            energético de servidores locales. Sensores de grado industrial conectados vía             
+            <strong>ESP32S3</strong> transmiten por <strong>MQTT</strong>; un puente en               
+            <strong>Python</strong> almacena los datos en una base de datos de series de tiempo       
+            <strong>InfluxDB</strong>, expuestos en un dashboard de <strong>Grafana</strong>          
+            orquestado con <strong>Docker Compose</strong> y con alertas por <strong>Telegram</strong>
+            bajo acceso seguro vía <strong>Tailscale</strong>.                                        
+          </p>                                                                                  
+          <div class="stack-tags">                                                              
+                                                                                            
+            <span>ESP32S3</span><span>MQTT</span><span>Python</span><span>InfluxDB</span><span>Grafana
+            </span><span>Docker</span><span>Tailscale</span>                                          
+          </div>                                                                                
+          <a class="repo-link" href="https://github.com/sam222634/homelab-health-dashboard" target="_blank" rel="noopener noreferrer">                                                
+            <i class="fa-brands fa-github"></i> Ver repositorio                                 
+          </a>                                                                                  
+        </article>          
+      </div>
+    </section>
+
+   
+    <section id="education" class="section" aria-labelledby="education-title">
+      <h2 id="education-title" class="section-title"><span class="path-tag">~/education</span> Educación &amp; Certificaciones</h2>
+
+      <div class="timeline">
+
+        <article class="timeline-item">
+          <div class="timeline-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="timeline-content">
+            <h3>Ingeniería en Sistemas Computacionales</h3>
+            <p class="timeline-meta"><strong>Licenciatura / Ingeniería</strong> Instituto Tecnológico de Celaya · 2023 – 2027 (en curso)</p>
+            <ul class="tag-list">
+              <li>El servicio social liberado con el departamento de redes e internet de la institución.</li>
+            </ul>
+          </div>
+        </article>
+
+       
+      </div>
+    </section>
+
+  </main>
+
+ 
+  <footer class="site-footer">
+    <p class="term-line">
+      <span class="term-user">visitante@cv-devops</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span>
+      echo "Gracias por leer mi CV"
+    </p>
+    <p class="output-role">Gracias por leer mi CV <span class="cursor" aria-hidden="true">▌</span></p>
+    <p class="copyright">&copy; <span id="year">2026</span> Samuel Zamora Martinez. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
