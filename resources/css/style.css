@@ -1,0 +1,512 @@
+
+/* ------------------------------------------------------------
+   1. VARIABLES CSS
+   ------------------------------------------------------------ */
+:root {
+  /* Fondos */
+  --bg-body: #0a0f14;        /* fondo general, casi negro con tinte azulado */
+  --bg-surface: #10171e;     /* fondo de tarjetas / superficie elevada */
+  --bg-surface-alt: #131c25; /* variante de superficie (terminal body) */
+  --bg-terminal-bar: #1a232c;
+
+  /* Acentos tecnológicos */
+  --accent-cyan: #33e6ff;    /* azul eléctrico / cian - acento principal */
+  --accent-green: #3dffa0;   /* verde terminal - acento de "output" y CTA */
+  --accent-blue: #4d8dff;    /* azul eléctrico secundario */
+
+  /* Texto */
+  --text-primary: #e8eef2;
+  --text-secondary: #9fb0bd;
+  --text-muted: #64757f;
+
+  /* Bordes y líneas */
+  --border-color: #22303a;
+  --border-hover: #33e6ff55;
+
+  /* Tipografía */
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Layout */
+  --max-width: 1100px;
+  --radius: 8px;
+  --transition: 0.2s ease;
+}
+
+/* ------------------------------------------------------------
+   2. RESET BÁSICO
+   ------------------------------------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-body);
+  /* Textura sutil tipo "circuito" con gradientes radiales, muy discreta */
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(51, 230, 255, 0.05), transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(61, 255, 160, 0.04), transparent 40%);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img, svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Foco visible para accesibilidad de teclado */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
+/* Respeta preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ------------------------------------------------------------
+   3. TIPOGRAFÍA BASE / UTILIDADES
+   ------------------------------------------------------------ */
+.path-tag {
+  font-family: var(--font-mono);
+  color: var(--accent-green);
+  font-weight: 500;
+  font-size: 0.85em;
+  margin-right: 0.6em;
+  opacity: 0.85;
+}
+
+.section-title {
+  font-family: var(--font-mono);
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+}
+
+/* ------------------------------------------------------------
+   4. HEADER / TERMINAL HERO
+   Elemento "firma" del diseño: una ventana de terminal simulada
+   con líneas tipo prompt y cursor parpadeante.
+   ------------------------------------------------------------ */
+.hero {
+  padding: clamp(1.5rem, 5vw, 4rem) 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.terminal-window {
+  width: 100%;
+  max-width: var(--max-width);
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(51, 230, 255, 0.04);
+}
+
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  background-color: var(--bg-terminal-bar);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-red { background-color: #ff5f57; }
+.dot-yellow { background-color: #febc2e; }
+.dot-green { background-color: #28c840; }
+
+.terminal-title {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-left: 0.5rem;
+}
+
+.terminal-body {
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.term-line {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+  word-break: break-word;
+}
+
+.term-line .term-user {
+  color: var(--accent-green);
+}
+
+.term-line .colon,
+.term-line .dollar {
+  color: var(--text-muted);
+  margin: 0 0.15em;
+}
+
+.term-line .path {
+  color: var(--accent-blue);
+}
+
+.output-name {
+  font-family: var(--font-mono);
+  font-size: clamp(1.9rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0.2rem 0 1.2rem 0;
+  letter-spacing: -0.02em;
+}
+
+.output-name::before {
+  content: "> ";
+  color: var(--accent-cyan);
+}
+
+.output-role {
+  font-family: var(--font-mono);
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  color: var(--accent-cyan);
+  margin-bottom: 1.5rem;
+}
+
+.output-role .pipe {
+  color: var(--text-muted);
+  margin: 0 0.4em;
+}
+
+/* Cursor parpadeante: único acento animado del diseño */
+.cursor {
+  color: var(--accent-green);
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* Navegación de contacto dentro de la terminal */
+.contact-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.contact-nav a,
+.contact-nav span {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color var(--transition);
+}
+
+.contact-nav a:hover {
+  color: var(--accent-cyan);
+}
+
+.contact-nav i {
+  color: var(--accent-cyan);
+  width: 1.1em;
+  text-align: center;
+}
+
+/* ------------------------------------------------------------
+   5. LAYOUT GENERAL DE SECCIONES
+   ------------------------------------------------------------ */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 3rem 0;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.lead-text {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: var(--text-secondary);
+  max-width: 75ch;
+}
+
+.lead-text strong {
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------
+   6. CARDS (Skills / Proyectos)
+   Grid responsivo con auto-fit para adaptarse a cualquier ancho.
+   ------------------------------------------------------------ */
+.cards-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.skills-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.projects-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: 0 12px 30px -15px rgba(51, 230, 255, 0.25);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.card-icon {
+  font-size: 1.4rem;
+  color: var(--accent-green);
+}
+
+.card h3 {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+
+/* Lista de tecnologías dentro de la tarjeta de skills */
+.tag-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  padding: 0.35rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.tag-list li:last-child {
+  border-bottom: none;
+}
+
+.tag-list i {
+  color: var(--accent-blue);
+  width: 1.2em;
+  text-align: center;
+}
+
+/* Tarjetas de proyectos */
+.project-card h3 {
+  margin-bottom: 0.6rem;
+  font-size: 1.15rem;
+}
+
+.project-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.stack-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.stack-tags span {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-green);
+  background-color: rgba(61, 255, 160, 0.08);
+  border: 1px solid rgba(61, 255, 160, 0.25);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+}
+
+.repo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent-cyan);
+  border: 1px solid var(--accent-cyan);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.repo-link:hover {
+  background-color: var(--accent-cyan);
+  color: var(--bg-body);
+}
+
+/* ------------------------------------------------------------
+   7. TIMELINE (Educación y Certificaciones)
+   ------------------------------------------------------------ */
+.timeline {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.85rem;
+  top: 0.3rem;
+  bottom: 0.3rem;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent-cyan), var(--accent-green));
+  opacity: 0.4;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -2.5rem;
+  top: 0;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: var(--accent-cyan);
+}
+
+.timeline-content h3 {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.timeline-meta {
+  font-size: 0.85rem;
+  color: var(--accent-green);
+  font-family: var(--font-mono);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p:last-child {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  max-width: 65ch;
+}
+
+/* ------------------------------------------------------------
+   8. FOOTER
+   ------------------------------------------------------------ */
+.site-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+  text-align: center;
+  border-top: 1px dashed var(--border-color);
+}
+
+.site-footer .term-line,
+.site-footer .output-role {
+  justify-content: center;
+  display: block;
+}
+
+.copyright {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ------------------------------------------------------------
+   9. RESPONSIVE
+   ------------------------------------------------------------ */
+@media (max-width: 640px) {
+  .contact-nav ul {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .terminal-title {
+    display: none; /* oculta el título de la ventana en pantallas muy pequeñas */
+  }
+
+  .timeline {
+    padding-left: 2rem;
+  }
+
+  .timeline-icon {
+    left: -2rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 0.75rem;
+  }
+
+  .section-title {
+    flex-wrap: wrap;
+  }
+}
