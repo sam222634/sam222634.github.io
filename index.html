@@ -111,6 +111,72 @@
   </header>
 
   <main>
+    <div class="cv-layout">
+
+      <!-- Columna izquierda: sidebar con las habilidades técnicas -->
+      <aside class="sidebar-col">
+        <section id="skills" class="section sidebar-section" aria-labelledby="skills-title">
+          <h2 id="skills-title" class="section-title"><span class="path-tag">~/skills</span> Habilidades técnicas</h2>
+
+          <div class="cards-grid skills-grid">
+
+            <!-- Card 1: Backend -->
+            <article class="card">
+              <div class="card-header">
+                <i class="fa-solid fa-server card-icon" aria-hidden="true"></i>
+                <h3>Backend</h3>
+              </div>
+              <ul class="tag-list">
+                <li><i class="fa-brands fa-php"></i> PHP</li>
+                <li><i class="fa-brands fa-python"></i> Python</li>
+                <li><i class="fa-brands fa-node-js"></i> Node.js</li>
+                <li><i class="fa-solid fa-database"></i> MySQL / PostgreSQL</li>
+                <li><i class="fa-solid fa-plug"></i> REST APIs</li>
+                <li><i class="fa-brands fa-laravel"></i> Laravel</li>
+              </ul>
+            </article>
+
+            <!-- Card 2: DevOps & Linux -->
+            <article class="card">
+              <div class="card-header">
+                <i class="fa-brands fa-linux card-icon" aria-hidden="true"></i>
+                <h3>DevOps &amp; Linux</h3>
+              </div>
+              <ul class="tag-list">
+                <li><i class="fa-brands fa-docker"></i> Docker &amp; Compose</li>
+                <li><i class="fa-solid fa-terminal"></i> Bash Scripting</li>
+                <li><i class="fa-brands fa-git-alt"></i> Git &amp; GitHub Actions</li>
+                <li><i class="fa-solid fa-network-wired"></i> Administración de Redes</li>
+                <li><i class="fa-solid fa-shield-halved"></i> SysAdmin (Ubuntu/Debian)</li>
+                <li><i class="fa-solid fa-cloud"></i> Nginx / VPS</li>
+              </ul>
+            </article>
+
+            <!-- Card 3: IoT y Electrónica -->
+            <article class="card">
+              <div class="card-header">
+                <i class="fa-solid fa-microchip card-icon" aria-hidden="true"></i>
+                <h3>IoT &amp; Electrónica</h3>
+              </div>
+              <ul class="tag-list">
+                <li><i class="fa-solid fa-wifi"></i> ESP32 / ESP8266</li>
+                <li><i class="fa-solid fa-tower-broadcast"></i> Protocolo MQTT</li>
+                <li><i class="fa-brands fa-usb"></i> Arduino / Microcontroladores</li>
+                <li><i class="fa-solid fa-bolt"></i> Electrónica Analógica/Digital</li>
+                <li><i class="fa-solid fa-satellite-dish"></i> Sensores &amp; Actuadores</li>
+                <!--
+                <li><i class="fa-solid fa-code"></i> C / C++ embebido</li>
+                -->
+              </ul>
+            </article>
+
+          </div>
+        </section>
+      </aside>
+
+      <!-- Columna derecha: el resto del contenido -->
+      <div class="content-col">
+
     <section id="about" class="section" aria-labelledby="about-title">
       <h2 id="about-title" class="section-title"><span class="path-tag">~/about</span> Sobre mí</h2>
       <div class="section-content">
@@ -122,64 +188,6 @@
           software mediante microcontroladores <strong>ESP32</strong> y el protocolo <strong>MQTT</strong>.
           Me interesa seguir creciendo en las areas Backend, DevOps e IoT para resolver problemas reales.
         </p>
-      </div>
-    </section>
-
-    <section id="skills" class="section" aria-labelledby="skills-title">
-      <h2 id="skills-title" class="section-title"><span class="path-tag">~/skills</span> Habilidades técnicas</h2>
-
-      <div class="cards-grid skills-grid">
-
-        <!-- Card 1: Backend -->
-        <article class="card">
-          <div class="card-header">
-            <i class="fa-solid fa-server card-icon" aria-hidden="true"></i>
-            <h3>Backend</h3>
-          </div>
-          <ul class="tag-list">
-            <li><i class="fa-brands fa-php"></i> PHP</li>
-            <li><i class="fa-brands fa-python"></i> Python</li>
-            <li><i class="fa-brands fa-node-js"></i> Node.js</li>
-            <li><i class="fa-solid fa-database"></i> MySQL / PostgreSQL</li>
-            <li><i class="fa-solid fa-plug"></i> REST APIs</li>
-            <li><i class="fa-brands fa-laravel"></i> Laravel</li>
-          </ul>
-        </article>
-
-        <!-- Card 2: DevOps & Linux -->
-        <article class="card">
-          <div class="card-header">
-            <i class="fa-brands fa-linux card-icon" aria-hidden="true"></i>
-            <h3>DevOps &amp; Linux</h3>
-          </div>
-          <ul class="tag-list">
-            <li><i class="fa-brands fa-docker"></i> Docker &amp; Compose</li>
-            <li><i class="fa-solid fa-terminal"></i> Bash Scripting</li>
-            <li><i class="fa-brands fa-git-alt"></i> Git &amp; GitHub Actions</li>
-            <li><i class="fa-solid fa-network-wired"></i> Administración de Redes</li>
-            <li><i class="fa-solid fa-shield-halved"></i> SysAdmin (Ubuntu/Debian)</li>
-            <li><i class="fa-solid fa-cloud"></i> Nginx / VPS</li>
-          </ul>
-        </article>
-
-        <!-- Card 3: IoT y Electrónica -->
-        <article class="card">
-          <div class="card-header">
-            <i class="fa-solid fa-microchip card-icon" aria-hidden="true"></i>
-            <h3>IoT &amp; Electrónica</h3>
-          </div>
-          <ul class="tag-list">
-            <li><i class="fa-solid fa-wifi"></i> ESP32 / ESP8266</li>
-            <li><i class="fa-solid fa-tower-broadcast"></i> Protocolo MQTT</li>
-            <li><i class="fa-brands fa-usb"></i> Arduino / Microcontroladores</li>
-            <li><i class="fa-solid fa-bolt"></i> Electrónica Analógica/Digital</li>
-            <li><i class="fa-solid fa-satellite-dish"></i> Sensores &amp; Actuadores</li>
-            <!--
-            <li><i class="fa-solid fa-code"></i> C / C++ embebido</li>
-            -->
-          </ul>
-        </article>
-
       </div>
     </section>
 
@@ -357,6 +365,11 @@
       </div>
     </section>
 
+      </div>
+      <!-- /content-col -->
+
+    </div>
+    <!-- /cv-layout -->
   </main>
 
 
