@@ -316,6 +316,31 @@ main {
   padding: 0 1.5rem;
 }
 
+/* ---- 5.1 Layout de dos columnas: sidebar (skills) + contenido ---- */
+.cv-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.sidebar-col {
+  position: sticky;
+  top: 1.5rem;
+}
+
+.sidebar-section {
+  padding-top: 3rem;
+}
+
+.sidebar-section .skills-grid {
+  grid-template-columns: 1fr;
+}
+
+.content-col {
+  min-width: 0;
+}
+
 .section {
   padding: 3rem 0;
   border-bottom: 1px dashed var(--border-color);
@@ -605,6 +630,20 @@ main {
 /* ------------------------------------------------------------
    10. RESPONSIVE
    ------------------------------------------------------------ */
+@media (max-width: 880px) {
+  .cv-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-col {
+    position: static;
+  }
+
+  .sidebar-section {
+    padding-top: 0;
+  }
+}
+
 @media (max-width: 640px) {
   .contact-nav ul {
     flex-direction: column;
@@ -623,6 +662,10 @@ main {
 
   .hero-photo-col {
     margin-bottom: 0.5rem;
+  }
+
+  .sidebar-section .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 
   .timeline {
