@@ -25,7 +25,7 @@
 </head>
 <body>
 
- 
+
   <header class="hero">
     <div class="terminal-window">
 
@@ -38,50 +38,74 @@
       </div>
 
       <div class="terminal-body">
-        <p class="term-line">
-          <span class="term-user">visitante@cv-devops</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span>
-          whoami
-        </p>
+        <div class="hero-columns">
 
-        <h1 class="output-name">Samuel Zamora Martinez</h1>
+          <!-- Columna de foto -->
+          <div class="hero-photo-col">
+            <div class="photo-frame">
+              <img
+                class="profile-photo"
+                src="/resources/img/foto-perfil.jpg"
+                alt="Fotografía de Samuel Zamora Martinez"
+              >
+              <span class="available-badge">
+                <span class="available-dot"></span>
+                Disponible
+              </span>
+            </div>
+          </div>
 
-        <p class="term-line">
-          <span class="term-user">visitante@cv-devops</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span>
-          cat perfil.txt
-        </p>
+          <!-- Columna de texto / terminal -->
+          <div class="hero-text-col">
 
-        <p class="output-role">
-          Estudiante de Ing. en Sistemas Computacionales <span class="pipe">|</span>
-          Backend, DevOps &amp; IoT
-        </p>
+            <p class="term-line">
+              <span class="term-user">visitante@cv-devops</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span>
+              whoami
+            </p>
 
-        <p class="term-line">
-          <span class="term-user">visitante@cv-devops</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span>
-          ./contacto.sh<span class="cursor" aria-hidden="true">▌</span>
-        </p>
+            <h1 class="output-name">Samuel Zamora Martinez</h1>
 
-        <nav class="contact-nav" aria-label="Enlaces de contacto y redes">
-          <ul>
-            <li>
-              <a href="mailto:sam.zamoramty+cv+@gmail.com">
-                <i class="fa-solid fa-envelope" aria-hidden="true"></i> sam.zamoramty@gmail.com
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/sam222634" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-github" aria-hidden="true"></i> github.com/sam222634
-              </a>
-            </li>
-            <li>
-              <a href="tel:+524612189375">
-                <i class="fa-solid fa-phone" aria-hidden="true"></i> +524612189375
-              </a>
-            </li>
-            <li>
-              <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Celaya, Guanajuato, México</span>
-            </li>
-          </ul>
-        </nav>
+            <p class="term-line">
+              <span class="term-user">visitante@cv-devops</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span>
+              cat perfil.txt
+            </p>
+
+            <p class="output-role">
+              Estudiante de Ing. en Sistemas Computacionales <span class="pipe">|</span>
+              Backend, DevOps &amp; IoT
+            </p>
+
+            <p class="term-line">
+              <span class="term-user">visitante@cv-devops</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span>
+              ./contacto.sh<span class="cursor" aria-hidden="true">▌</span>
+            </p>
+
+            <nav class="contact-nav" aria-label="Enlaces de contacto y redes">
+              <ul>
+                <li>
+                  <a href="mailto:sam.zamoramty+cv+@gmail.com">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i> sam.zamoramty@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/sam222634" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i> github.com/sam222634
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+524612189375">
+                    <i class="fa-solid fa-phone" aria-hidden="true"></i> +524612189375
+                  </a>
+                </li>
+                <li>
+                  <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Celaya, Guanajuato, México</span>
+                </li>
+              </ul>
+            </nav>
+
+          </div>
+
+        </div>
       </div>
     </div>
   </header>
@@ -100,7 +124,7 @@
         </p>
       </div>
     </section>
-    
+
     <section id="skills" class="section" aria-labelledby="skills-title">
       <h2 id="skills-title" class="section-title"><span class="path-tag">~/skills</span> Habilidades técnicas</h2>
 
@@ -159,7 +183,108 @@
       </div>
     </section>
 
-    
+    <section id="soft-skills" class="section" aria-labelledby="soft-skills-title">
+      <h2 id="soft-skills-title" class="section-title"><span class="path-tag">~/soft-skills</span> Habilidades blandas</h2>
+
+      <div class="cards-grid soft-skills-grid">
+
+        <article class="card soft-skill-card">
+          <div class="card-header">
+            <i class="fa-solid fa-people-group card-icon" aria-hidden="true"></i>
+            <h3>Trabajo en equipo</h3>
+          </div>
+          <p class="soft-skill-desc">
+            Colaboración efectiva en proyectos multidisciplinarios, con enfoque en
+            comunicación clara y metas compartidas.
+          </p>
+        </article>
+
+        <article class="card soft-skill-card">
+          <div class="card-header">
+            <i class="fa-solid fa-lightbulb card-icon" aria-hidden="true"></i>
+            <h3>Resolución de problemas</h3>
+          </div>
+          <p class="soft-skill-desc">
+            Análisis y depuración sistemática de fallos, tanto en software como en
+            infraestructura y hardware.
+          </p>
+        </article>
+
+        <article class="card soft-skill-card">
+          <div class="card-header">
+            <i class="fa-solid fa-arrows-spin card-icon" aria-hidden="true"></i>
+            <h3>Adaptabilidad</h3>
+          </div>
+          <p class="soft-skill-desc">
+            Capacidad de aprender nuevas herramientas y tecnologías con rapidez ante
+            proyectos y requerimientos cambiantes.
+          </p>
+        </article>
+
+        <article class="card soft-skill-card">
+          <div class="card-header">
+            <i class="fa-solid fa-graduation-cap card-icon" aria-hidden="true"></i>
+            <h3>Aprendizaje autónomo</h3>
+          </div>
+          <p class="soft-skill-desc">
+            Investigación y estudio independiente de documentación técnica, cursos y
+            comunidades open source.
+          </p>
+        </article>
+
+        <article class="card soft-skill-card">
+          <div class="card-header">
+            <i class="fa-solid fa-comments card-icon" aria-hidden="true"></i>
+            <h3>Comunicación</h3>
+          </div>
+          <p class="soft-skill-desc">
+            Explicación clara de conceptos técnicos a públicos técnicos y no técnicos,
+            de forma oral y escrita.
+          </p>
+        </article>
+
+        <article class="card soft-skill-card">
+          <div class="card-header">
+            <i class="fa-solid fa-clock card-icon" aria-hidden="true"></i>
+            <h3>Gestión del tiempo</h3>
+          </div>
+          <p class="soft-skill-desc">
+            Organización de tareas y prioridades para cumplir con entregas académicas
+            y de proyectos personales.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="languages" class="section" aria-labelledby="languages-title">
+      <h2 id="languages-title" class="section-title"><span class="path-tag">~/languages</span> Idiomas</h2>
+
+      <div class="languages-wrap">
+
+        <div class="language-item">
+          <div class="language-header">
+            <span class="language-name">Español</span>
+            <span class="language-level">Nativo</span>
+          </div>
+          <div class="language-track">
+            <div class="language-value" style="width: 100%;"></div>
+          </div>
+        </div>
+
+        <div class="language-item">
+          <div class="language-header">
+            <span class="language-name">Inglés</span>
+            <span class="language-level">B1</span>
+          </div>
+          <div class="language-track">
+            <div class="language-value" style="width: 50%;"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <section id="projects" class="section" aria-labelledby="projects-title">
       <h2 id="projects-title" class="section-title"><span class="path-tag">~/projects</span> Proyectos/Emprendimiento</h2>
 
@@ -211,7 +336,7 @@
       </div>
     </section>
 
-   
+
     <section id="education" class="section" aria-labelledby="education-title">
       <h2 id="education-title" class="section-title"><span class="path-tag">~/education</span> Educación &amp; Certificaciones</h2>
 
@@ -228,13 +353,13 @@
           </div>
         </article>
 
-       
+
       </div>
     </section>
 
   </main>
 
- 
+
   <footer class="site-footer">
     <p class="term-line">
       <span class="term-user">visitante@cv-devops</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span>
