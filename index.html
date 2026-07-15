@@ -113,9 +113,10 @@
   <main>
     <div class="cv-layout">
 
-      <!-- Columna izquierda: sidebar con las habilidades técnicas -->
-      <aside class="sidebar-col">
-        <section id="skills" class="section sidebar-section" aria-labelledby="skills-title">
+      <!-- Columna izquierda -->
+      <div class="col-left">
+
+        <section id="skills" class="section" aria-labelledby="skills-title">
           <h2 id="skills-title" class="section-title"><span class="path-tag">~/skills</span> Habilidades técnicas</h2>
 
           <div class="cards-grid skills-grid">
@@ -172,201 +173,200 @@
 
           </div>
         </section>
-      </aside>
 
-      <!-- Columna derecha: el resto del contenido -->
-      <div class="content-col">
+        <section id="soft-skills" class="section" aria-labelledby="soft-skills-title">
+          <h2 id="soft-skills-title" class="section-title"><span class="path-tag">~/soft-skills</span> Habilidades blandas</h2>
 
-    <section id="about" class="section" aria-labelledby="about-title">
-      <h2 id="about-title" class="section-title"><span class="path-tag">~/about</span> Sobre mí</h2>
-      <div class="section-content">
-        <p class="lead-text">
-          Estudiante de Ingeniería en Sistemas Computacionales apasionado por construir
-          <strong>infraestructura confiable</strong> y <strong>sistemas embebidos conectados</strong>.
-          Disfruto automatizar procesos con <strong>Bash</strong> y <strong>Docker</strong>, diseñar APIs
-          robustas en <strong>Python</strong> y <strong>Node.js</strong>, y llevar datos del mundo físico al
-          software mediante microcontroladores <strong>ESP32</strong> y el protocolo <strong>MQTT</strong>.
-          Me interesa seguir creciendo en las areas Backend, DevOps e IoT para resolver problemas reales.
-        </p>
-      </div>
-    </section>
+          <div class="cards-grid soft-skills-grid">
 
-    <section id="soft-skills" class="section" aria-labelledby="soft-skills-title">
-      <h2 id="soft-skills-title" class="section-title"><span class="path-tag">~/soft-skills</span> Habilidades blandas</h2>
+            <article class="card soft-skill-card">
+              <div class="card-header">
+                <i class="fa-solid fa-people-group card-icon" aria-hidden="true"></i>
+                <h3>Trabajo en equipo</h3>
+              </div>
+              <p class="soft-skill-desc">
+                Colaboración efectiva en proyectos multidisciplinarios, con enfoque en
+                comunicación clara y metas compartidas.
+              </p>
+            </article>
 
-      <div class="cards-grid soft-skills-grid">
+            <article class="card soft-skill-card">
+              <div class="card-header">
+                <i class="fa-solid fa-lightbulb card-icon" aria-hidden="true"></i>
+                <h3>Resolución de problemas</h3>
+              </div>
+              <p class="soft-skill-desc">
+                Análisis y depuración sistemática de fallos, tanto en software como en
+                infraestructura y hardware.
+              </p>
+            </article>
 
-        <article class="card soft-skill-card">
-          <div class="card-header">
-            <i class="fa-solid fa-people-group card-icon" aria-hidden="true"></i>
-            <h3>Trabajo en equipo</h3>
+            <article class="card soft-skill-card">
+              <div class="card-header">
+                <i class="fa-solid fa-arrows-spin card-icon" aria-hidden="true"></i>
+                <h3>Adaptabilidad</h3>
+              </div>
+              <p class="soft-skill-desc">
+                Capacidad de aprender nuevas herramientas y tecnologías con rapidez ante
+                proyectos y requerimientos cambiantes.
+              </p>
+            </article>
+
+            <article class="card soft-skill-card">
+              <div class="card-header">
+                <i class="fa-solid fa-graduation-cap card-icon" aria-hidden="true"></i>
+                <h3>Aprendizaje autónomo</h3>
+              </div>
+              <p class="soft-skill-desc">
+                Investigación y estudio independiente de documentación técnica, cursos y
+                comunidades open source.
+              </p>
+            </article>
+
+            <article class="card soft-skill-card">
+              <div class="card-header">
+                <i class="fa-solid fa-comments card-icon" aria-hidden="true"></i>
+                <h3>Comunicación</h3>
+              </div>
+              <p class="soft-skill-desc">
+                Explicación clara de conceptos técnicos a públicos técnicos y no técnicos,
+                de forma oral y escrita.
+              </p>
+            </article>
+
+            <article class="card soft-skill-card">
+              <div class="card-header">
+                <i class="fa-solid fa-clock card-icon" aria-hidden="true"></i>
+                <h3>Gestión del tiempo</h3>
+              </div>
+              <p class="soft-skill-desc">
+                Organización de tareas y prioridades para cumplir con entregas académicas
+                y de proyectos personales.
+              </p>
+            </article>
+
           </div>
-          <p class="soft-skill-desc">
-            Colaboración efectiva en proyectos multidisciplinarios, con enfoque en
-            comunicación clara y metas compartidas.
-          </p>
-        </article>
+        </section>
 
-        <article class="card soft-skill-card">
-          <div class="card-header">
-            <i class="fa-solid fa-lightbulb card-icon" aria-hidden="true"></i>
-            <h3>Resolución de problemas</h3>
+        <section id="languages" class="section" aria-labelledby="languages-title">
+          <h2 id="languages-title" class="section-title"><span class="path-tag">~/languages</span> Idiomas</h2>
+
+          <div class="languages-wrap">
+
+            <div class="language-item">
+              <div class="language-header">
+                <span class="language-name">Español</span>
+                <span class="language-level">Nativo</span>
+              </div>
+              <div class="language-track">
+                <div class="language-value" style="width: 100%;"></div>
+              </div>
+            </div>
+
+            <div class="language-item">
+              <div class="language-header">
+                <span class="language-name">Inglés</span>
+                <span class="language-level">B1</span>
+              </div>
+              <div class="language-track">
+                <div class="language-value" style="width: 50%;"></div>
+              </div>
+            </div>
+
           </div>
-          <p class="soft-skill-desc">
-            Análisis y depuración sistemática de fallos, tanto en software como en
-            infraestructura y hardware.
-          </p>
-        </article>
-
-        <article class="card soft-skill-card">
-          <div class="card-header">
-            <i class="fa-solid fa-arrows-spin card-icon" aria-hidden="true"></i>
-            <h3>Adaptabilidad</h3>
-          </div>
-          <p class="soft-skill-desc">
-            Capacidad de aprender nuevas herramientas y tecnologías con rapidez ante
-            proyectos y requerimientos cambiantes.
-          </p>
-        </article>
-
-        <article class="card soft-skill-card">
-          <div class="card-header">
-            <i class="fa-solid fa-graduation-cap card-icon" aria-hidden="true"></i>
-            <h3>Aprendizaje autónomo</h3>
-          </div>
-          <p class="soft-skill-desc">
-            Investigación y estudio independiente de documentación técnica, cursos y
-            comunidades open source.
-          </p>
-        </article>
-
-        <article class="card soft-skill-card">
-          <div class="card-header">
-            <i class="fa-solid fa-comments card-icon" aria-hidden="true"></i>
-            <h3>Comunicación</h3>
-          </div>
-          <p class="soft-skill-desc">
-            Explicación clara de conceptos técnicos a públicos técnicos y no técnicos,
-            de forma oral y escrita.
-          </p>
-        </article>
-
-        <article class="card soft-skill-card">
-          <div class="card-header">
-            <i class="fa-solid fa-clock card-icon" aria-hidden="true"></i>
-            <h3>Gestión del tiempo</h3>
-          </div>
-          <p class="soft-skill-desc">
-            Organización de tareas y prioridades para cumplir con entregas académicas
-            y de proyectos personales.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-    <section id="languages" class="section" aria-labelledby="languages-title">
-      <h2 id="languages-title" class="section-title"><span class="path-tag">~/languages</span> Idiomas</h2>
-
-      <div class="languages-wrap">
-
-        <div class="language-item">
-          <div class="language-header">
-            <span class="language-name">Español</span>
-            <span class="language-level">Nativo</span>
-          </div>
-          <div class="language-track">
-            <div class="language-value" style="width: 100%;"></div>
-          </div>
-        </div>
-
-        <div class="language-item">
-          <div class="language-header">
-            <span class="language-name">Inglés</span>
-            <span class="language-level">B1</span>
-          </div>
-          <div class="language-track">
-            <div class="language-value" style="width: 50%;"></div>
-          </div>
-        </div>
+        </section>
 
       </div>
-    </section>
+      <!-- /col-left -->
 
-    <section id="projects" class="section" aria-labelledby="projects-title">
-      <h2 id="projects-title" class="section-title"><span class="path-tag">~/projects</span> Proyectos/Emprendimiento</h2>
+      <!-- Columna derecha -->
+      <div class="col-right">
 
-      <div class="cards-grid projects-grid">
-
-        <article class="card project-card">
-          <!-- Emprendimiento/proyecto 1 -->
-          <h3>Sistema de Gestión, Cotización e Inventario para Manufactura 3D/2D</h3>
-          <p class="project-desc">
-            Plataforma web diseñada para automatizar el ciclo de venta de un negocio de impresión 
-            3D y corte 2D. Implementa un cotizador automático en tiempo real que analiza archivos     
-            <strong>.STL</strong> mediante <strong>Three.js (WebGL)</strong> y la API de
-            <strong>Kiri:Moto</strong> desde el navegador; el backend desarrollado en <strong>PHP     
-            (MVC)</strong> asegura la consistencia de inventario mediante transacciones en            
-            <strong>PostgreSQL</strong> e integra pagos seguros con la API de <strong>PayPal</strong>.
-          </p>
-          <div class="stack-tags">
-            <span>PHP (MVC)</span><span>PostgreSQL</span><span>Three.
-            js</span><span>WebGL</span><span>PayPal API</span><span>Kiri:Moto</span>
+        <section id="about" class="section" aria-labelledby="about-title">
+          <h2 id="about-title" class="section-title"><span class="path-tag">~/about</span> Sobre mí</h2>
+          <div class="section-content">
+            <p class="lead-text">
+              Estudiante de Ingeniería en Sistemas Computacionales apasionado por construir
+              <strong>infraestructura confiable</strong> y <strong>sistemas embebidos conectados</strong>.
+              Disfruto automatizar procesos con <strong>Bash</strong> y <strong>Docker</strong>, diseñar APIs
+              robustas en <strong>Python</strong> y <strong>Node.js</strong>, y llevar datos del mundo físico al
+              software mediante microcontroladores <strong>ESP32</strong> y el protocolo <strong>MQTT</strong>.
+              Me interesa seguir creciendo en las areas Backend, DevOps e IoT para resolver problemas reales.
+            </p>
           </div>
-          <!--
-          <a class="repo-link" href="https://github.com/sam222634/Gestion-invernadero-manufactura" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-github"></i> Ver repositorio
-          </a>
-            -->
-        </article>
+        </section>
 
-        <!-- Proyecto 1 -->
-        <article class="card project-card">                                                     
-          <h3>Homelab Health Dashboard</h3>                                                     
-          <p class="project-desc">                                                              
-            Sistema de observabilidad en tiempo real para monitorear salud ambiental y consumo  
-            energético de servidores locales. Sensores de grado industrial conectados vía             
-            <strong>ESP32S3</strong> transmiten por <strong>MQTT</strong>; un puente en               
-            <strong>Python</strong> almacena los datos en una base de datos de series de tiempo       
-            <strong>InfluxDB</strong>, expuestos en un dashboard de <strong>Grafana</strong>          
-            orquestado con <strong>Docker Compose</strong> y con alertas por <strong>Telegram</strong>
-            bajo acceso seguro vía <strong>Tailscale</strong>.                                        
-          </p>                                                                                  
-          <div class="stack-tags">                                                              
-                                                                                            
-            <span>ESP32S3</span><span>MQTT</span><span>Python</span><span>InfluxDB</span><span>Grafana
-            </span><span>Docker</span><span>Tailscale</span>                                          
-          </div>                                                                                
-          <a class="repo-link" href="https://github.com/sam222634/homelab-health-dashboard" target="_blank" rel="noopener noreferrer">                                                
-            <i class="fa-brands fa-github"></i> Ver repositorio                                 
-          </a>                                                                                  
-        </article>          
-      </div>
-    </section>
+        <section id="projects" class="section" aria-labelledby="projects-title">
+          <h2 id="projects-title" class="section-title"><span class="path-tag">~/projects</span> Proyectos/Emprendimiento</h2>
 
+          <div class="cards-grid projects-grid">
 
-    <section id="education" class="section" aria-labelledby="education-title">
-      <h2 id="education-title" class="section-title"><span class="path-tag">~/education</span> Educación &amp; Certificaciones</h2>
+            <article class="card project-card">
+              <!-- Emprendimiento/proyecto 1 -->
+              <h3>Sistema de Gestión, Cotización e Inventario para Manufactura 3D/2D</h3>
+              <p class="project-desc">
+                Plataforma web diseñada para automatizar el ciclo de venta de un negocio de impresión 
+                3D y corte 2D. Implementa un cotizador automático en tiempo real que analiza archivos     
+                <strong>.STL</strong> mediante <strong>Three.js (WebGL)</strong> y la API de
+                <strong>Kiri:Moto</strong> desde el navegador; el backend desarrollado en <strong>PHP     
+                (MVC)</strong> asegura la consistencia de inventario mediante transacciones en            
+                <strong>PostgreSQL</strong> e integra pagos seguros con la API de <strong>PayPal</strong>.
+              </p>
+              <div class="stack-tags">
+                <span>PHP (MVC)</span><span>PostgreSQL</span><span>Three.
+                js</span><span>WebGL</span><span>PayPal API</span><span>Kiri:Moto</span>
+              </div>
+              <!--
+              <a class="repo-link" href="https://github.com/sam222634/Gestion-invernadero-manufactura" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i> Ver repositorio
+              </a>
+                -->
+            </article>
 
-      <div class="timeline">
-
-        <article class="timeline-item">
-          <div class="timeline-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-          <div class="timeline-content">
-            <h3>Ingeniería en Sistemas Computacionales</h3>
-            <p class="timeline-meta"><strong>Licenciatura / Ingeniería</strong> Instituto Tecnológico de Celaya · 2023 – 2027 (en curso)</p>
-            <ul class="tag-list">
-              <li>El servicio social liberado con el departamento de redes e internet de la institución.</li>
-            </ul>
+            <!-- Proyecto 1 -->
+            <article class="card project-card">                                                     
+              <h3>Homelab Health Dashboard</h3>                                                     
+              <p class="project-desc">                                                              
+                Sistema de observabilidad en tiempo real para monitorear salud ambiental y consumo  
+                energético de servidores locales. Sensores de grado industrial conectados vía             
+                <strong>ESP32S3</strong> transmiten por <strong>MQTT</strong>; un puente en               
+                <strong>Python</strong> almacena los datos en una base de datos de series de tiempo       
+                <strong>InfluxDB</strong>, expuestos en un dashboard de <strong>Grafana</strong>          
+                orquestado con <strong>Docker Compose</strong> y con alertas por <strong>Telegram</strong>
+                bajo acceso seguro vía <strong>Tailscale</strong>.                                        
+              </p>                                                                                  
+              <div class="stack-tags">                                                              
+                <span>ESP32S3</span><span>MQTT</span><span>Python</span><span>InfluxDB</span><span>Grafana
+                </span><span>Docker</span><span>Tailscale</span>                                          
+              </div>                                                                                
+              <a class="repo-link" href="https://github.com/sam222634/homelab-health-dashboard" target="_blank" rel="noopener noreferrer">                                                
+                <i class="fa-brands fa-github"></i> Ver repositorio                                 
+              </a>                                                                                  
+            </article>          
           </div>
-        </article>
+        </section>
 
+        <section id="education" class="section" aria-labelledby="education-title">
+          <h2 id="education-title" class="section-title"><span class="path-tag">~/education</span> Educación &amp; Certificaciones</h2>
+
+          <div class="timeline">
+
+            <article class="timeline-item">
+              <div class="timeline-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="timeline-content">
+                <h3>Ingeniería en Sistemas Computacionales</h3>
+                <p class="timeline-meta"><strong>Licenciatura / Ingeniería</strong> Instituto Tecnológico de Celaya · 2023 – 2027 (en curso)</p>
+                <ul class="tag-list">
+                  <li>El servicio social liberado con el departamento de redes e internet de la institución.</li>
+                </ul>
+              </div>
+            </article>
+
+          </div>
+        </section>
 
       </div>
-    </section>
-
-      </div>
-      <!-- /content-col -->
+      <!-- /col-right -->
 
     </div>
     <!-- /cv-layout -->
