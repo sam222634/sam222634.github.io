@@ -321,7 +321,7 @@ main {
    Derecha:   about, projects, education        */
 .cv-layout {
   display: grid;
-  grid-template-columns: 1.35fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: clamp(1.5rem, 4vw, 3rem);
   align-items: start;
 }
