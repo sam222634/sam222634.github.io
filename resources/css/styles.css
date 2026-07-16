@@ -103,10 +103,17 @@ button:focus-visible {
   color: var(--text-primary);
   margin-bottom: 1.5rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   gap: 0.4rem;
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.75rem;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.section-title > * {
+  min-width: 0;
 }
 
 /* ------------------------------------------------------------
@@ -341,15 +348,27 @@ main {
 
 .col-left .card {
   padding: 0.9rem;
+  min-width: 0;
 }
 
 .col-left .card h3 {
   font-size: 0.85rem;
+  overflow-wrap: break-word;
+}
+
+.col-left .card-header {
+  flex-wrap: wrap;
+  min-width: 0;
 }
 
 .col-left .tag-list li,
 .col-left .soft-skill-desc {
   font-size: 0.78rem;
+  overflow-wrap: break-word;
+}
+
+.col-left .tag-list li {
+  flex-wrap: wrap;
 }
 
 .col-right .projects-grid {
