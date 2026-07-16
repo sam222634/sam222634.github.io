@@ -316,29 +316,27 @@ main {
   padding: 0 1.5rem;
 }
 
-/* ---- 5.1 Layout de dos columnas: sidebar (skills) + contenido ---- */
+/* ---- 5.1 Layout de dos columnas parejas ----
+   Izquierda: skills, soft-skills, languages
+   Derecha:   about, projects, education        */
 .cv-layout {
   display: grid;
-  grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: clamp(1.5rem, 4vw, 3rem);
   align-items: start;
 }
 
-.sidebar-col {
-  position: sticky;
-  top: 1.5rem;
-}
-
-.sidebar-section {
-  padding-top: 3rem;
-}
-
-.sidebar-section .skills-grid {
-  grid-template-columns: 1fr;
-}
-
-.content-col {
+.col-left,
+.col-right {
   min-width: 0;
+}
+
+/* Cada columna es angosta, así que las tarjetas de skills/proyectos
+   se acomodan en una sola columna dentro de cada mitad */
+.col-left .skills-grid,
+.col-left .soft-skills-grid,
+.col-right .projects-grid {
+  grid-template-columns: 1fr;
 }
 
 .section {
@@ -635,12 +633,10 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .sidebar-col {
-    position: static;
-  }
-
-  .sidebar-section {
-    padding-top: 0;
+  .col-left .skills-grid,
+  .col-left .soft-skills-grid,
+  .col-right .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 }
 
@@ -662,10 +658,6 @@ main {
 
   .hero-photo-col {
     margin-bottom: 0.5rem;
-  }
-
-  .sidebar-section .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 
   .timeline {
