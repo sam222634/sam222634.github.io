@@ -321,7 +321,7 @@ main {
    Derecha:   about, projects, education        */
 .cv-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.35fr 1fr;
   gap: clamp(1.5rem, 4vw, 3rem);
   align-items: start;
 }
@@ -331,10 +331,13 @@ main {
   min-width: 0;
 }
 
-/* Cada columna es angosta, así que las tarjetas de skills/proyectos
-   se acomodan en una sola columna dentro de cada mitad */
+/* La izquierda es más ancha, así que sus tarjetas se acomodan de a
+   2 por fila en vez de apilarse una sobre otra (menos alto total) */
 .col-left .skills-grid,
-.col-left .soft-skills-grid,
+.col-left .soft-skills-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .col-right .projects-grid {
   grid-template-columns: 1fr;
 }
