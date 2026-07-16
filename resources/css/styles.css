@@ -331,11 +331,11 @@ main {
   min-width: 0;
 }
 
-/* La izquierda es más ancha, así que sus tarjetas se acomodan de a
-   2 por fila en vez de apilarse una sobre otra (menos alto total) */
+/* La izquierda es más ancha: sus tarjetas se acomodan solas según
+   el espacio disponible (auto-fit), en vez de forzar 1 sola columna */
 .col-left .skills-grid,
 .col-left .soft-skills-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
 .col-right .projects-grid {
@@ -634,6 +634,15 @@ main {
 @media (max-width: 880px) {
   .cv-layout {
     grid-template-columns: 1fr;
+  }
+
+  /* Al apilarse en una sola columna, "Sobre mí" va arriba */
+  .col-right {
+    order: 1;
+  }
+
+  .col-left {
+    order: 2;
   }
 
   .col-left .skills-grid,
