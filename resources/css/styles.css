@@ -328,7 +328,7 @@ main {
    Derecha:   about, projects, education        */
 .cv-layout {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 3fr 5fr; /* 37.5% / 62.5% */
   gap: clamp(1.25rem, 3vw, 2.25rem);
   align-items: start;
 }
@@ -338,7 +338,7 @@ main {
   min-width: 0;
 }
 
-/* La izquierda es angosta (25%): forzamos 2 columnas fijas para las
+/* La izquierda es angosta (37.5%): forzamos 2 columnas fijas para las
    tarjetas en vez de auto-fit, que colapsaría a 1 con tan poco ancho */
 .col-left .skills-grid,
 .col-left .soft-skills-grid {
