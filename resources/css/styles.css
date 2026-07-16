@@ -525,26 +525,27 @@ main {
 
 /* ------------------------------------------------------------
    7. IDIOMAS
-   Barra de progreso por idioma, en línea con el resto del sistema
-   (superficie oscura + acentos cian/verde).
+   Lista simple con insignia de nivel (sin barra de progreso:
+   un porcentaje inventado no dice nada real sobre el dominio
+   del idioma).
    ------------------------------------------------------------ */
-.languages-wrap {
+.language-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
   max-width: 480px;
 }
 
-.language-item {
-  width: 100%;
-}
-
-.language-header {
+.language-row {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 0.5rem;
-  font-family: var(--font-mono);
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.language-row:last-child {
+  border-bottom: none;
 }
 
 .language-name {
@@ -553,25 +554,17 @@ main {
   font-weight: 500;
 }
 
-.language-level {
-  font-size: 0.8rem;
-  color: var(--accent-green);
+.language-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
   font-weight: 700;
-}
-
-.language-track {
-  height: 8px;
-  width: 100%;
+  color: var(--accent-green);
+  border: 1px solid var(--accent-green);
   border-radius: 999px;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
-  overflow: hidden;
-}
-
-.language-value {
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-green));
+  padding: 0.3rem 0.75rem;
+  white-space: nowrap;
 }
 
 /* ------------------------------------------------------------
