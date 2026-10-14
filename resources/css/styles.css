@@ -750,21 +750,22 @@ main {
     border-bottom: 1px solid #ccc !important;
   }
 
-  /* 2. Forzar texto a oscuro y REDUCIR TAMAÑOS para papel */
+  /* 2. Reducir el texto para que quepa más información */
   body {
     color: #000 !important;
-    font-size: 10pt !important; /* Reducimos la letra general un poco */
+    font-size: 9.5pt !important;
   }
   .output-name, .section-title, .card h3, .timeline-content h3, .language-name, .path-tag, .timeline-list strong {
     color: #000 !important;
   }
   .section-title {
-    font-size: 13pt !important;
+    font-size: 12pt !important;
     margin-bottom: 0.5rem !important;
+    padding-bottom: 0.2rem !important;
   }
   .term-line, .project-desc, .soft-skill-desc, .lead-text, .tag-list li, .timeline-list li, .text-secondary {
     color: #333 !important;
-    line-height: 1.3 !important; /* Interlineado más apretado */
+    line-height: 1.3 !important;
   }
 
   /* 3. Bordes formales */
@@ -772,39 +773,49 @@ main {
     border: 1px solid #bbb !important;
   }
 
-  /* 4. REDUCIR EL HEADER Y LA FOTO GIGANTE */
+  /* 4. Comprimir drásticamente el Header y la foto */
   .hero { padding: 0 !important; }
-  .terminal-body { padding: 0.8rem !important; }
+  .terminal-body { padding: 0.6rem !important; }
   
   .photo-frame, .profile-photo {
-    width: 110px !important; /* Hacemos la foto mucho más pequeña */
-    height: 110px !important;
+    width: 100px !important; /* Foto mucho más discreta para CV en papel */
+    height: 100px !important;
   }
   .hero-columns {
-    grid-template-columns: 130px 1fr !important; /* Ajustamos la cuadrícula a la nueva foto */
-    gap: 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
   }
 
-  /* 5. ELIMINAR LOS HUECOS BLANCOS GIGANTES */
+  /* 5. DISEÑO DE DOS COLUMNAS A PRUEBA DE CORTES */
+  .cv-layout {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 3% !important;
+  }
+  .col-left { width: 32% !important; }
+  .col-right { width: 65% !important; }
+
+  /* 6. CORTES EXACTOS POR ARTÍCULO (TARJETA) */
   .section {
-    page-break-inside: auto !important; /* ESTA ES LA CLAVE: permite que las secciones fluyan */
+    page-break-inside: auto !important; /* Permite que la sección se parta en 2 hojas */
     break-inside: auto !important;
-    padding: 0.8rem 0 !important;
-    margin: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 1rem !important;
+    border: none !important; /* Oculta lineas punteadas divisorias */
   }
 
-  /* Solo evitamos que se parta a la mitad una tarjeta individual, no toda la sección */
   .card, .timeline-item {
-    page-break-inside: avoid !important;
+    page-break-inside: avoid !important; /* Obliga a que la tarjeta no se parta a la mitad */
     break-inside: avoid !important;
     padding: 0.8rem !important;
+    margin-bottom: 0.6rem !important;
   }
 
-  /* 6. Comprimir espacios en blanco de las cuadrículas */
-  .cv-layout { gap: 1rem !important; }
-  .cards-grid { gap: 0.5rem !important; }
-  .project-card { margin-bottom: 0.5rem !important; }
-  .timeline-item { margin-bottom: 0.8rem !important; }
+  /* Desactivar sub-cuadrículas para que las tarjetas se apilen hacia abajo en su columna */
+  .cards-grid { display: block !important; }
+  .card { width: 100% !important; box-sizing: border-box !important; }
 
   /* 7. Ocultar interfaz web */
   .cursor, .site-footer { display: none !important; }
