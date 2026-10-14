@@ -735,8 +735,9 @@ main {
 }
 
 /* ------------------------------------------------------------
-   ESTILOS EXCLUSIVOS PARA IMPRESIÓN / PDF (ACTUALIZADO)
+   ESTILOS EXCLUSIVOS PARA IMPRESIÓN / PDF 
    ------------------------------------------------------------ */
+
 @media print {
   /* 1. Resetear fondos oscuros para ahorrar tinta */
   body, .terminal-window, .card, .timeline-icon, .available-badge {
@@ -749,12 +750,21 @@ main {
     border-bottom: 1px solid #ccc !important;
   }
 
-  /* 2. Forzar texto a negro/gris oscuro */
-  body, .output-name, .section-title, .card h3, .timeline-content h3, .language-name, .path-tag, .timeline-list strong {
+  /* 2. Forzar texto a oscuro y REDUCIR TAMAÑOS para papel */
+  body {
     color: #000 !important;
+    font-size: 10pt !important; /* Reducimos la letra general un poco */
+  }
+  .output-name, .section-title, .card h3, .timeline-content h3, .language-name, .path-tag, .timeline-list strong {
+    color: #000 !important;
+  }
+  .section-title {
+    font-size: 13pt !important;
+    margin-bottom: 0.5rem !important;
   }
   .term-line, .project-desc, .soft-skill-desc, .lead-text, .tag-list li, .timeline-list li, .text-secondary {
     color: #333 !important;
+    line-height: 1.3 !important; /* Interlineado más apretado */
   }
 
   /* 3. Bordes formales */
@@ -762,43 +772,40 @@ main {
     border: 1px solid #bbb !important;
   }
 
-  /* 4. ELIMINAR ESPACIO EN BLANCO: Forzar 1 sola columna vertical */
-  .cv-layout {
-    display: block !important; 
+  /* 4. REDUCIR EL HEADER Y LA FOTO GIGANTE */
+  .hero { padding: 0 !important; }
+  .terminal-body { padding: 0.8rem !important; }
+  
+  .photo-frame, .profile-photo {
+    width: 110px !important; /* Hacemos la foto mucho más pequeña */
+    height: 110px !important;
   }
-  .col-left, .col-right {
-    width: 100% !important;
-    display: block !important;
-  }
-
-  /* 5. Acomodar las tarjetas para aprovechar la hoja */
-  .skills-grid, .soft-skills-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important; /* 2 tarjetas por fila */
+  .hero-columns {
+    grid-template-columns: 130px 1fr !important; /* Ajustamos la cuadrícula a la nueva foto */
     gap: 1rem !important;
   }
-  .projects-grid {
-    display: block !important;
-  }
-  .project-card {
-    margin-bottom: 1rem !important;
+
+  /* 5. ELIMINAR LOS HUECOS BLANCOS GIGANTES */
+  .section {
+    page-break-inside: auto !important; /* ESTA ES LA CLAVE: permite que las secciones fluyan */
+    break-inside: auto !important;
+    padding: 0.8rem 0 !important;
+    margin: 0 !important;
   }
 
-  /* 6. Evitar que las cosas se corten a mitad de página */
-  .card, .timeline-item, .section, .hero-columns {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-  
-  /* Reducir márgenes excesivos */
-  .hero { padding: 0.5rem 0 !important; }
-  .section { 
-    padding: 1rem 0 !important; 
-    border-bottom: 1px solid #eee !important; 
+  /* Solo evitamos que se parta a la mitad una tarjeta individual, no toda la sección */
+  .card, .timeline-item {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    padding: 0.8rem !important;
   }
 
-  /* 7. Ocultar menú y animaciones en papel */
-  .cursor, .site-footer {
-    display: none !important;
-  }
+  /* 6. Comprimir espacios en blanco de las cuadrículas */
+  .cv-layout { gap: 1rem !important; }
+  .cards-grid { gap: 0.5rem !important; }
+  .project-card { margin-bottom: 0.5rem !important; }
+  .timeline-item { margin-bottom: 0.8rem !important; }
+
+  /* 7. Ocultar interfaz web */
+  .cursor, .site-footer { display: none !important; }
 }
