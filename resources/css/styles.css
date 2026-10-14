@@ -713,3 +713,54 @@ main {
     flex-wrap: wrap;
   }
 }
+
+/* ------------------------------------------------------------
+   11. ESTILOS EXCLUSIVOS PARA IMPRESIÓN / PDF
+   ------------------------------------------------------------ */
+@media print {
+  /* 1. Resetear fondos oscuros para ahorrar tinta y asegurar legibilidad */
+  body, .terminal-window, .card, .timeline-icon, .available-badge {
+    background-color: white !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+
+  .terminal-bar {
+    background-color: #f5f5f5 !important;
+    border-bottom: 1px solid #ccc !important;
+  }
+
+  /* 2. Forzar texto a negro/gris oscuro (ignora las variables claras) */
+  body, .output-name, .section-title, .card h3, .timeline-content h3, .language-name, .path-tag {
+    color: #000 !important;
+  }
+  
+  .term-line, .project-desc, .soft-skill-desc, .lead-text, .tag-list li, .text-secondary {
+    color: #333 !important;
+  }
+
+  /* 3. Cambiar los bordes neón por bordes grises formales */
+  .terminal-window, .card, .timeline-icon, .available-badge, .language-badge, .repo-link, .stack-tags span {
+    border: 1px solid #bbb !important;
+  }
+
+  /* 4. Evitar que las tarjetas o experiencias se corten a la mitad de una página */
+  .card, .timeline-item, .section, .hero-columns {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* 5. Ajustar espacios gigantes para que quepa en 1 o 2 hojas como máximo */
+  .hero {
+    padding: 1rem 0 !important;
+  }
+  .section {
+    padding: 1.5rem 0 !important;
+    border-bottom: 1px solid #eee !important;
+  }
+
+  /* 6. Ocultar cosas que no sirven en papel (cursor parpadeante, footer, etc.) */
+  .cursor, .site-footer {
+    display: none !important;
+  }
+}
