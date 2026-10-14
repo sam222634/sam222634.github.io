@@ -750,7 +750,7 @@ main {
     border-bottom: 1px solid #ccc !important;
   }
 
-  /* 2. Reducir el texto para que quepa más información */
+  /* 2. Reducir el texto general */
   body {
     color: #000 !important;
     font-size: 9.5pt !important;
@@ -763,7 +763,7 @@ main {
     margin-bottom: 0.5rem !important;
     padding-bottom: 0.2rem !important;
   }
-  .term-line, .project-desc, .soft-skill-desc, .lead-text, .tag-list li, .timeline-list li, .text-secondary {
+  .term-line, .project-desc, .lead-text, .timeline-list li, .text-secondary {
     color: #333 !important;
     line-height: 1.3 !important;
   }
@@ -773,12 +773,12 @@ main {
     border: 1px solid #bbb !important;
   }
 
-  /* 4. Comprimir drásticamente el Header y la foto */
+  /* 4. Comprimir el Header y la foto */
   .hero { padding: 0 !important; }
   .terminal-body { padding: 0.6rem !important; }
   
   .photo-frame, .profile-photo {
-    width: 100px !important; /* Foto mucho más discreta para CV en papel */
+    width: 100px !important;
     height: 100px !important;
   }
   .hero-columns {
@@ -787,36 +787,71 @@ main {
     gap: 1.5rem !important;
   }
 
-  /* 5. DISEÑO DE DOS COLUMNAS A PRUEBA DE CORTES */
+  /* 5. DISEÑO DE COLUMNAS (Un poco más de ancho para la izquierda) */
   .cv-layout {
     display: flex !important;
     flex-direction: row !important;
     align-items: flex-start !important;
-    gap: 3% !important;
+    gap: 2% !important;
   }
-  .col-left { width: 32% !important; }
-  .col-right { width: 65% !important; }
+  .col-left { width: 35% !important; } /* Aumentamos al 35% para que las tarjetas respiren */
+  .col-right { width: 63% !important; }
 
-  /* 6. CORTES EXACTOS POR ARTÍCULO (TARJETA) */
+  /* 6. CORTES DE PÁGINA */
   .section {
-    page-break-inside: auto !important; /* Permite que la sección se parta en 2 hojas */
+    page-break-inside: auto !important; 
     break-inside: auto !important;
     padding: 0 !important;
     margin-bottom: 1rem !important;
-    border: none !important; /* Oculta lineas punteadas divisorias */
+    border: none !important; 
   }
 
   .card, .timeline-item {
-    page-break-inside: avoid !important; /* Obliga a que la tarjeta no se parta a la mitad */
+    page-break-inside: avoid !important; 
     break-inside: avoid !important;
-    padding: 0.8rem !important;
     margin-bottom: 0.6rem !important;
   }
 
-  /* Desactivar sub-cuadrículas para que las tarjetas se apilen hacia abajo en su columna */
-  .cards-grid { display: block !important; }
-  .card { width: 100% !important; box-sizing: border-box !important; }
+  /* 7. COMPRESIÓN ESPECÍFICA DE LAS TARJETAS */
+  /* La columna derecha de proyectos se queda apilada normalmente */
+  .projects-grid {
+    display: block !important;
+  }
+  .project-card {
+    padding: 0.8rem !important;
+  }
+  
+  /* La columna izquierda mantiene 2 columnas pero muy compactas */
+  .skills-grid, .soft-skills-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.4rem !important; /* Espacio mínimo entre tarjetas */
+  }
 
-  /* 7. Ocultar interfaz web */
+  /* Ajustes agresivos para que todo quepa en las tarjetitas de la izquierda */
+  .col-left .card {
+    padding: 0.5rem !important;
+  }
+  .col-left .card-header {
+    margin-bottom: 0.3rem !important;
+    gap: 0.3rem !important;
+  }
+  .col-left .card h3 {
+    font-size: 8.5pt !important;
+  }
+  .col-left .card-icon {
+    font-size: 0.9rem !important;
+  }
+  .soft-skill-desc {
+    font-size: 7.5pt !important; /* Letra más pequeña para las descripciones */
+    line-height: 1.15 !important;
+    color: #333 !important;
+  }
+  .tag-list li {
+    font-size: 8pt !important;
+    padding: 0.2rem 0 !important;
+  }
+
+  /* 8. Ocultar interfaz web */
   .cursor, .site-footer { display: none !important; }
 }
