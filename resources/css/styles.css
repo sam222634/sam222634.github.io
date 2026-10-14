@@ -776,11 +776,7 @@ main {
     margin-bottom: 0.5rem !important;
     padding-bottom: 0.2rem !important;
   }
-   /* Evitar "títulos huérfanos"  */
-  .section-title {
-    page-break-after: avoid !important;
-    break-after: avoid !important;
-  }
+  
   .term-line, .project-desc, .lead-text, .timeline-list li, .text-secondary {
     color: #333 !important;
     line-height: 1.3 !important;
@@ -873,3 +869,8 @@ main {
   /* 8. Ocultar interfaz web */
   .cursor, .site-footer { display: none !important; }
 }
+
+  #experience {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
