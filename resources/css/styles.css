@@ -735,6 +735,19 @@ main {
 }
 
 /* ------------------------------------------------------------
+   ALINEACIÓN DE TEXTO (JUSTIFICADO)
+   ------------------------------------------------------------ */
+.lead-text,
+.soft-skill-desc,
+.project-desc,
+.timeline-list li,
+.timeline-content p:last-child {
+  text-align: justify;
+  hyphens: auto;         /* Pro-tip: Ayuda a separar sílabas con guiones */
+  -webkit-hyphens: auto; /* para evitar "ríos" de espacio en blanco */
+}
+
+/* ------------------------------------------------------------
    ESTILOS EXCLUSIVOS PARA IMPRESIÓN / PDF 
    ------------------------------------------------------------ */
 
